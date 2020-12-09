@@ -1,5 +1,5 @@
                                Temperature Humidity Sensor via ThingSpeak
-In a nation like Canada where the weather conditions are uncertain for a majority of time, the residents always keep themselves updated about the knowledge of temperature and humidity in their diurnal life. As this country experiences eight months of harsh winters, which makes it one of the coldest nations in the world [1], the significance of temperature and humidity sensors is on plateau with getting the houses insulated. In addition, humidity is as important as temperature to know on a diurnal basis. Moreover, temperature and humidity both have a myriad of vital roles in our environment – like production of food, maintaining health, preventing the growth of molds and bacteria, etc. [3]. Therefore, we would like to propose this set up so that it proves useful in mapping accurate temperature and humidity. 
+In a nation like Canada where the weather conditions are uncertain for a majority of time, the residents always keep themselves updated about the knowledge of temperature and humidity in their diurnal life. As this country experiences eight months of harsh winters, which makes it one of the coldest nations in the world, the significance of temperature and humidity sensors is on plateau with getting the houses insulated. In addition, humidity is as important as temperature to know on a diurnal basis. Moreover, temperature and humidity both have a myriad of vital roles in our environment – like production of food, maintaining health, preventing the growth of molds and bacteria, etc. Therefore, we would like to propose this set up so that it proves useful in mapping accurate temperature and humidity. 
 
 
 Our project is all about sensing the approximate temperature and humidity in the environment using DHT11 sensor and sending a tweet on the Twitter via ThingSpeak.com. This works while linking the NodeMCU with the Twitter so that we can tweet the current weather conditions with appropriate message on the Twitter. To make the set up more facile to utilize, once the code is executed, the sensor senses the temperature and humidity every hour and tweets on the Tweeter with appropriate comments. This works while connecting the NodeMCU to the ThinkSpeak.com.  
@@ -55,6 +55,7 @@ Team:
 Credits:
 
 •	ThingSpeak: Ideas about how to link the Twitter to the wifi. 
+         Thingspeak.com. n.d. Iot Analytics - Thingspeak Internet Of Things. Available at: <https://thingspeak.com/>.
 	
 
 
@@ -87,16 +88,5 @@ Credits:
 
 
 
-
-
-
-
-
-
-
-
-
-CITATIONS:
-3] https://www.makeuseof.com/tag/4-health-benefits-monitoring-temp-humidity-home/
 
 
