@@ -1,14 +1,14 @@
-/***********************************************************************************************************************************************************8** 
+/***********************************************************************************************************************************************************8**
    Temperature - Humidity Sensor via ThingSpeak
-   
+
    Purpose: To measure the surrounding temperature and humidity.
-   
-   library used : ESP8266WiFI.h 
+
+   library used : ESP8266WiFI.h
                   Arduino.h
                   ESP8266HTTPClient.h
                   DHT.h
 
-    
+
    Source Code:
 ****************************************************************************************************************************************************************/
 
@@ -25,93 +25,93 @@
 DHT dht(DHTPIN, DHTTYPE);  //object declare of DHT
 
 String host = "api.thingspeak.com";
-int httpPort = 80;  
+int httpPort = 80;
 String url = "/apps/thingtweet/1/statuses/update";
 
-HTTPClient http; 
+HTTPClient http;
 
 
-void setup() 
+void setup()
 {
   Serial.begin(9600);
 
   //initialize the sensor
   dht.begin();
- 
+
   WiFi.begin("Smruti", "11110000");
-  while(WiFi.status() != WL_CONNECTED)
+  while (WiFi.status() != WL_CONNECTED)
   {
     delay(200);
     Serial.print("..");
   }
   Serial.println();
-  Serial.println("NodeMCU is connected!");-
+  Serial.println("NodeMCU is connected!"); -
   Serial.println(WiFi.localIP());
-  http.begin(host,httpPort,url);
+  http.begin(host, httpPort, url);
   String RequestBody = "api_key=DFMG0VMP7IXIV1ZN&status=I just posted this from my NodeMCU!";
   int httpCode = http.POST(RequestBody);
   Serial.println(httpCode);
-  
+
   delay(2000);                      //Wait before accessing Sensor
 }
 
-void loop() 
+void loop()
 {
 
-  //Start of Program 
-       
-        //read humidity and store int the variable h
-        int h = dht.readHumidity(); 
-       
-        // read temperature
-        int t = dht.readTemperature();
-        
-        http.begin(host, httpPort, url);
-        String RequestBody = "api_key=1SXQEAMGKJBQWFDG&status=";
-        
-        //output of temperature
-         RequestBody += "Temperature:  " + String(t);
-        
+  //Start of Program
 
-        String z= "The summmer is on high. Better be ready for the heat!";
-        //output of humidity
-        RequestBody += "°C  Humidity:  " + String(h);
+  //read humidity and store int the variable h
+  int h = dht.readHumidity();
 
-        String x = "Woah! It's a lovely weather for some crazy fun!";
-        
-        String y = "It's commencing to get cold. Enjoy the winter weather!";
+  // read temperature
+  int t = dht.readTemperature();
 
-        String p= "Extreme freezing weather outside. Better be cozy under the covers!";
-        
-        if(t>20)
-        {
-           RequestBody += "\n" +String(z);  // print the message if temperature is greater than 20 C
- 
-        }
-        else if(t>0 && t<=20)
-        {
-          RequestBody += "\n" + String(x);  // print the message if temperature is between 0 C and 20 C
-        }
-        else if(t<0 && t>15)
-        {
-          RequestBody += "\n" + String(y);  // print the message if temperature is between 0 C and -15 C
-        }
-        else if(t<-15)
-        {
-          RequestBody += "\n" +String(p);   //print the message if temperature is less than -15 C
- 
-        }
-        
-        int httpCode = http.POST(RequestBody);
-        Serial.println(httpCode);
-        
-        //Wait 1 hour before accessing sensor again.
-        delay(3600000);
-     
+  http.begin(host, httpPort, url);
+  String RequestBody = "api_key=1SXQEAMGKJBQWFDG&status=";
 
-  
+  //output of temperature
+  RequestBody += "Temperature:  " + String(t);
+
+
+  //output of humidity
+  RequestBody += "°C  Humidity:  " + String(h);
+
+  String z = "The summmer is on high. Better be ready for the heat!";
+
+  String x = "Woah! It's a lovely weather for some crazy fun!";
+
+  String y = "It's commencing to get cold. Enjoy the winter weather!";
+
+  String p = "Extreme freezing weather outside. Better be cozy under the covers!";
+
+  if (t > 20)
+  {
+    RequestBody += "\n" + String(z); // print the message if temperature is greater than 20 C
+
+  }
+  else if (t >= 1 && t <= 20)
+  {
+    RequestBody += "\n" + String(x);  // print the message if temperature is between 0 C and 20 C
+  }
+  else if (t < -1 && t > -15)
+  {
+    RequestBody += "\n" + String(y);  // print the message if temperature is between 0 C and -15 C
+  }
+  else if (t < -15)
+  {
+    RequestBody += "\n" + String(p);  //print the message if temperature is less than -15 C
+
+  }
+
+  int httpCode = http.POST(RequestBody);
+  Serial.println(httpCode);
+
+  //Wait 1 hour before accessing sensor again.
+  delay(3600000);
+
+
+
 }
 
 
 
-   
