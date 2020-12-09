@@ -1,4 +1,4 @@
-                                                                       Temperature Humidity Sensor via ThingSpeak
+                                                        Temperature Humidity Sensor via ThingSpeak
 In a nation like Canada where the weather conditions are uncertain for a majority of time, the residents always keep themselves updated about the knowledge of temperature and humidity in their diurnal life. As this country experiences eight months of harsh winters, which makes it one of the coldest nations in the world [1], the significance of temperature and humidity sensors is on plateau with getting the houses insulated. In addition, humidity is as important as temperature to know on a diurnal basis. Moreover, temperature and humidity both have a myriad of vital roles in our environment – like production of food, maintaining health, preventing the growth of molds and bacteria, etc. [3]. Therefore, we would like to propose this set up so that it proves useful in mapping accurate temperature and humidity. 
 
 
