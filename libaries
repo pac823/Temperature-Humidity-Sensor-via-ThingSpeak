@@ -1,0 +1,8 @@
+ There are several libaries which are used in this project.
+1) ESP8266WiFI.h 
+
+2)Arduino.h
+
+3)ESP8266HTTPClient.h
+
+4)DHT.h
