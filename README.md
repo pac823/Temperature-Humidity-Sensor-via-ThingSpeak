@@ -12,39 +12,48 @@ Repository Contents:
 
 
 Requirements and Materials:
-List of Materials:
-•	1 * Breadboard
-•	1 * DHT 11
-•	1 * Node MCU
-•	8 * wires
-•	1 * resistor
-•	Data Cable
+      List of Materials:
+           •	1 * Breadboard
+           •	1 * DHT11
+           •	1 * Node MCU
+           •	8 * wires
+           •	1 * resistor
+           •	Data Cable
 
 
 Build Instructions: 
           Schematic diagram of the circuit are as follows: 
-          ![](img/schematic.jpg)
+          ![](schematic.jpg)
 	 
-                                        Fig : Schematic diagram of the circuit
+                                      
+				      
+				      Fig : Schematic diagram of the circuit
 
 
 
 
 Below that is the breadboard view of the project.
-
+                     ![](Breadboard.jpg)
  
+			
 			Fig : Breadboard diagram of the circuit
 Usage:
+
 •	Upload the code to the breadboard using Arduino software.
 •	Press the button for recording the current temperature and humidity.
 •	ThingSpeak links the Arduino to the Twitter over wifi and tweets the appropriate message on the Twitter.
 •	This set up can be used anywhere to sense the temperature and humidity. For instance, at home, offices and other institutions. 
 
 Team:
+
 •	Kush Shihora: Write up and presentation
+
 •	Prit Akbari: Coding and presentation
+
 •	Ishit Vasani: Build-up and modification of the circuit and presentation. 
+
 Credits:
+
 •	ThingSpeak: Ideas about how to link the Twitter to the wifi. 
 	
 
